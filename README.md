@@ -27,13 +27,38 @@ Based on EDA analysis, the project addresses:
 
 - What are the top 10 states in terms of sales, and how can businesses focus on these regions?
 
-- How does price impact sales volume?
+![top_10_states_sales](https://github.com/user-attachments/assets/835953cf-b447-4830-a669-024504d801d0)
+
+This bar chart highlights the top 10 states with the highest sales, helping businesses prioritize marketing and sales strategies in these high-performing regions
+
+- What is the distribution of revenue across all transactions, and are there any patterns or anomalies?
+
+![revenue_distribution](https://github.com/user-attachments/assets/578af4d3-59d8-42d0-b9fb-83980af13e88)
+
+- The histogram illustrates the frequency of revenue values, showing how revenue is distributed across transactions.
+- The majority of transactions have lower revenue values, while higher revenue occurrences are less frequent.
+- The shape of the distribution helps identify outliers, skewness, or any potential data imbalances in revenue generation.
+
 
 - What are the seasonal patterns in revenue generation?
 
+![price_vs_sales](https://github.com/user-attachments/assets/5e74a4bc-7f43-4fad-8c58-b0b7f6e21ce2)
+
+This time-series plot illustrates monthly revenue trends over several years, helping businesses identify seasonal peaks and low periods
+
 - Which business sectors contribute most to revenue?
 
-- What factors (e.g., customer state, sector, price) drive revenue most significantly?
+![feature_importance](https://github.com/user-attachments/assets/b19be9e0-5fca-439e-8208-f6b2a7f77f9e)
+
+The feature importance chart shows how various customer state sectors contribute to revenue, guiding businesses in sector-specific marketing efforts.
+
+- How accurately does the model predict revenue, and what are the deviations between actual and predicted values?
+
+![actual_vs_predicted](https://github.com/user-attachments/assets/5b0a4536-6ecb-46d6-92cf-8a11954cd1f5)
+
+- The scatter plot compares actual vs. predicted revenue values to assess the model's accuracy.
+- A strong correlation along the diagonal red reference line indicates good predictive performance.
+- Deviations from the line highlight cases where the model overestimates or underestimates revenue, guiding potential improvements.
 
 ### Description of Dataset, Model, and Algorithms
 The dataset, Customer_dataset.csv, consists of transaction records, capturing:
@@ -162,19 +187,47 @@ print(f"Model Evaluation Results:\nMAE: {mae}\nMSE: {mse}\nRMSE: {rmse}\nR² Sco
 
 ### Key Graphical Insights
 
-(A) Revenue Trends Over Time
+- Revenue Trends Over Time
+
+![revenue_trend](https://github.com/user-attachments/assets/9ce732a8-7936-42bc-96da-ec4e3f0697a7)
 
 📌 Insight: Revenue fluctuates seasonally, indicating peak sales periods.
 
-(B) Price vs Sales Relationship
+- Price vs Sales Relationship
+
+![price_vs_sales](https://github.com/user-attachments/assets/9769cd8c-96af-4e75-a46a-817ddf30c138)
 
 📌 Insight: Sales volume decreases as price increases, confirming price sensitivity in customer behavior.
 
-(C) Top 10 Customer States by Sales
+- Top 10 Customer States by Sales
+![top_10_states_sales](https://github.com/user-attachments/assets/1703aa7d-2ea1-401c-b7ef-f6dc9f71a394)
 
 📌 Insight: These states drive the majority of total revenue, requiring targeted marketing strategies.
 
 
+
+### Interpretation, Discussion, and Conclusion
+
+#### Discussion
+
+- The strong correlation between price and sales suggests that businesses should experiment with dynamic pricing.
+
+- Top states contribute significantly to total revenue, indicating potential regional sales campaigns.
+
+- The Linear Regression model performed well in predicting revenue, but future improvements could involve Random Forest or XGBoost for better accuracy.
+
+#### Conclusion
+
+This study demonstrates how data analytics can enhance business strategies by uncovering sales trends, pricing sensitivity, and regional opportunities. The findings support sales growth through data-driven marketing decisions
+
+### References
+
+This project is based on:
+
+
+- **Machine Learning Documentation:** [Scikit-learn](https://scikit-learn.org/)
+- **Data Visualization:** [Matplotlib](https://matplotlib.org/)
+- **Business Analytics Research:** *Harvard Business Review, McKinsey Reports*
 
 
 
